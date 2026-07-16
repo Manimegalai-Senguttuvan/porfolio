@@ -145,6 +145,10 @@
   }
   .hero-photo{
     position:relative;z-index:2;width:100%;
+    display:block;
+    border-radius:50%;
+    aspect-ratio:1/1;
+    object-fit:cover;
     filter:drop-shadow(0 20px 40px rgba(0,0,0,0.55));
     animation:floaty 6s ease-in-out infinite;
   }
@@ -316,6 +320,23 @@
     .social-rail{position:static;flex-direction:row;justify-content:center;margin-top:36px;}
     .scroll-cue{display:none;}
   }
+
+  @media(max-width:600px){
+    header{padding:18px 5vw;}
+    .hero{padding:120px 6vw 60px;}
+    .section-inner{padding:80px 6vw;}
+    .sec-title{margin-bottom:32px;}
+    .about-grid{gap:36px;}
+    .contact-grid{gap:40px;}
+    .info-row a, .info-row span{font-size:13px;word-break:break-word;}
+    .skill-chip{padding:10px 14px;font-size:13px;}
+    .stat-card{padding:18px;}
+  }
+
+  @media(max-width:400px){
+    .hero-photo-wrap{width:min(220px,68vw);}
+    .name-line, .role-line, .role-sub{font-size:clamp(24px,7vw,34px);}
+  }
 </style>
 </head>
 <body>
@@ -349,7 +370,8 @@
       <div class="photo-glow"></div>
       <div class="ring ring1"></div>
       <div class="ring ring2"></div>
-<img class="images/me.png>    </div>
+      <img class="hero-photo" src="images/me.png" alt="Manimegalai Senguttuvan">
+    </div>
 
     <div class="hero-right">
       <div class="eyebrow">Aspiring</div>
